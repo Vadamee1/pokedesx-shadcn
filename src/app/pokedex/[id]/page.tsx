@@ -16,7 +16,7 @@ export default async function Pokemon({ params, searchParams }: Props) {
   );
 
   return (
-    <div className="p-14 md:flex gap-2 sm:grid">
+    <div className="md:p-14 md:flex gap-2 sm:grid">
       <div className="md:basis-3/5">
         <ScrollArea>
           <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3">
@@ -33,7 +33,7 @@ export default async function Pokemon({ params, searchParams }: Props) {
         </ScrollArea>
         <PokemonPagination data={data} offset={Number(searchParams.offset)} />
       </div>
-      <div className="basis-2/5">
+      <div className="basis-2/5 mt-4 md:mt-0">
         <PokemonCard id={params.id} />
       </div>
     </div>

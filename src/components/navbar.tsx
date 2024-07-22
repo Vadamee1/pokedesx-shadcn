@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <div>
       <div className="flex justify-between items-center px-32 pt-5">
-        <div className="flex space-x-2 items-center">
+        <div className="flex space-x-2">
           <SheetNavbar />
           <div className="hidden md:flex gap-1  ">
             <span className={`${titleFont.className} text-2xl`}>Pokemon</span>
@@ -19,7 +19,7 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-        <div className="">
+        <div className="hidden lg:block">
           <RedirectLinks />
         </div>
         <Avatar>
