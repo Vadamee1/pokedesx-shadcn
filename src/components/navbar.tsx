@@ -19,7 +19,7 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-        <div className="hidden lg:block">
+        <div className="">
           <RedirectLinks />
         </div>
         <Avatar>

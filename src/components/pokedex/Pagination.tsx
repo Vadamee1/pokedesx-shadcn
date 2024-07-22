@@ -1,9 +1,7 @@
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
-  PaginationLink,
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
@@ -19,7 +17,7 @@ export default function PokemonPagination({ data, offset }: Props) {
   const newPreviousOffset = (offset ? offset : 0) - 15;
 
   return (
-    <Pagination className="mt-4">
+    <Pagination className="sm:mt-0 md:mt-4 sm:mb-6 mb-0">
       <PaginationContent>
         {data.previous ? (
           <PaginationItem>

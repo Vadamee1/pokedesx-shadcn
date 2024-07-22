@@ -13,7 +13,7 @@ export default function RedirectLinks() {
 
   return (
     <div
-      className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer"
+      className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 cursor-pointer"
       onClick={handleLinkClick}
     >
       {pokedex.name}
