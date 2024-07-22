@@ -1,5 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { typesFont } from "@/config/fonts";
+import { Card } from "@/components/ui/card";
 import { getIconType } from "@/lib/getIconType";
 import { PokemonType } from "@/types/pokemon";
 import Image from "next/image";

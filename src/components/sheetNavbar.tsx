@@ -9,7 +9,7 @@ export default function SheetNavbar() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <IoMenuSharp className="text-xl" />
+        <IoMenuSharp className="text-xl" aria-label="Menu" role="button" />
       </SheetTrigger>
       <SheetContent side="left">
         <SheetHeader>

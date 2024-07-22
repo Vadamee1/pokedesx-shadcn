@@ -1,4 +1,3 @@
-import { IoHomeOutline } from "react-icons/io5";
 import { Separator } from "./ui/separator";
 import { titleFont } from "@/config/fonts";
 import Link from "next/link";
@@ -23,7 +22,11 @@ export default function Navbar() {
           <RedirectLinks />
         </div>
         <Avatar>
-          <AvatarImage src="https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=900" />
+          <AvatarImage
+            src="https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=900"
+            alt="Avatar image"
+            className="object-cover"
+          />
           <AvatarFallback>PT</AvatarFallback>
         </Avatar>
       </div>
