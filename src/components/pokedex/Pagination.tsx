@@ -18,8 +18,6 @@ export default function PokemonPagination({ data, offset }: Props) {
   const newNextOffset = (offset ? offset : 0) + 15;
   const newPreviousOffset = (offset ? offset : 0) - 15;
 
-  console.log(newNextOffset);
-
   return (
     <Pagination className="mt-4">
       <PaginationContent>

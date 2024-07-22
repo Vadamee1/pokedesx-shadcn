@@ -15,8 +15,8 @@ export default async function Pokemon({ params, searchParams }: Props) {
   );
 
   return (
-    <div className="p-14 flex gap-2">
-      <div className="md:basis-3/5">
+    <div className="p-14 flex gap-2 sm:h-screen md:h-full">
+      <div className="md:basis-3/5 overflow-y-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {pokemons.map((pokemon) => (
             <IndividualCard
@@ -29,7 +29,7 @@ export default async function Pokemon({ params, searchParams }: Props) {
         </div>
         <PokemonPagination data={data} offset={Number(searchParams.offset)} />
       </div>
-      <div className="basis-2/5">
+      <div className="basis-2/5 sticky ">
         <PokemonCard id={params.id} />
       </div>
     </div>
