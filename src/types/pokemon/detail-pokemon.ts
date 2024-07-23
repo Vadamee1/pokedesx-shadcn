@@ -8,13 +8,7 @@ export type DetailPokemon = {
   types: PokemonType[];
   moves: MovePokemon[];
   stats: BaseStat[];
-  sprites: {
-    other: {
-      officialArtwork: {
-        front_default: string;
-      };
-    };
-  };
+  sprites: Sprites;
 };
 
 export type Abilities = {
@@ -40,7 +34,10 @@ export type MovePokemon = {
 
 export type MoveWithDescription = {
   name: string;
-  type: PokemonType;
+  type: {
+    name: string;
+    url: string;
+  };
   power: number;
   pp: number;
   damage_class: {
@@ -62,4 +59,28 @@ export type AbilitiesWithDescription = {
 
 export type EffectEntries = {
   effect: string;
+};
+
+export type Sprites = {
+  front_default: string;
+  front_shiny: string;
+  other: {
+    dream_world: {
+      front_default: string;
+    };
+    home: {
+      front_default: string;
+      front_shiny: string;
+    };
+    officialArtwork: {
+      front_default: string;
+      front_shiny: string;
+    };
+    showdown: {
+      front_default: string;
+      back_default: string;
+      front_shiny: string;
+      back_shiny: string;
+    };
+  };
 };

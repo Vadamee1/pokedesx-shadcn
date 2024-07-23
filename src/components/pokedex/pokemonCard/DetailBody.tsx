@@ -1,28 +1,22 @@
 import { Card } from "@/components/ui/card";
 import { getIconType } from "@/lib/getIconType";
 import { PokemonType } from "@/types/pokemon";
+import { Sprites } from "@/types/pokemon/detail-pokemon";
 import Image from "next/image";
+import SpritesCarousel from "./Sprites";
 
 interface Props {
-  image: string;
+  id: string;
   types: PokemonType[];
-  height: number;
-  weight: number;
+  sprites: Sprites;
 }
 
-export default function DetailBody({ image, height, types, weight }: Props) {
+export default function DetailBody({ id, types, sprites }: Props) {
   const pokemonType = getIconType(types);
 
   return (
     <div className="grid grid-cols-2">
-      <div className="flex justify-center">
-        <Image
-          alt="Detail Pokemon image"
-          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${image}.png`}
-          width={200}
-          height={200}
-        />
-      </div>
+      <SpritesCarousel sprites={sprites} id={id} />
       <div className="flex justify-center items-center">
         <Card className="flex flex-col items-center justify-center h-24 md:w-32 gap-3">
           {pokemonType.map((type) => (
