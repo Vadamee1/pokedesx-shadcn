@@ -1,4 +1,3 @@
-import { IoHomeOutline } from "react-icons/io5";
 import { Separator } from "./ui/separator";
 import { titleFont } from "@/config/fonts";
 import Link from "next/link";
@@ -10,7 +9,7 @@ export default function Navbar() {
   return (
     <div>
       <div className="flex justify-between items-center px-32 pt-5">
-        <div className="flex space-x-2 items-center">
+        <div className="flex space-x-2">
           <SheetNavbar />
           <div className="hidden md:flex gap-1  ">
             <span className={`${titleFont.className} text-2xl`}>Pokemon</span>
@@ -23,7 +22,11 @@ export default function Navbar() {
           <RedirectLinks />
         </div>
         <Avatar>
-          <AvatarImage src="https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=900" />
+          <AvatarImage
+            src="https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=900"
+            alt="Avatar image"
+            className="object-cover"
+          />
           <AvatarFallback>PT</AvatarFallback>
         </Avatar>
       </div>
