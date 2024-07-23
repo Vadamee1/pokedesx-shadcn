@@ -24,18 +24,21 @@ export default function SpritesCarousel({ sprites, id }: Props) {
   return (
     <Carousel>
       <CarouselContent>
-        {arraySprites.map((sprite) => (
-          <CarouselItem key={sprite}>
-            <div className="flex justify-center">
-              <Image
-                alt="Pokemon image"
-                src={sprite}
-                width={200}
-                height={200}
-              />
-            </div>
-          </CarouselItem>
-        ))}
+        {arraySprites.map(
+          (sprite) =>
+            sprite && (
+              <CarouselItem key={sprite}>
+                <div className="flex justify-center">
+                  <Image
+                    alt="Pokemon image"
+                    src={sprite}
+                    width={200}
+                    height={200}
+                  />
+                </div>
+              </CarouselItem>
+            )
+        )}
       </CarouselContent>
     </Carousel>
   );

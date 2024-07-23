@@ -1,5 +1,12 @@
 import Link from "next/link";
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "./ui/sheet";
 import { titleFont } from "@/config/fonts";
 import { Separator } from "./ui/separator";
 import RedirectLinks from "./redirectLinks";
@@ -13,17 +20,16 @@ export default function SheetNavbar() {
       </SheetTrigger>
       <SheetContent side="left">
         <SheetHeader>
-          <div className="flex gap-1 justify-center">
-            <span className={`${titleFont.className} text-2xl`}>Pokemon</span>
+          <SheetTitle className={`flex ${titleFont.className} gap-1`}>
+            <Link href="/">{"pokemon".toUpperCase()}</Link>
             <Link href="https://nextjs.org/" className="text-xs">
               with Next.js
             </Link>
-          </div>
+          </SheetTitle>
+          <SheetDescription> </SheetDescription>
         </SheetHeader>
         <Separator className="mt-2" />
-        <div className="mt-20">
-          <RedirectLinks />
-        </div>
+        <RedirectLinks isSheet />
       </SheetContent>
     </Sheet>
   );

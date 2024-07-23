@@ -4,5 +4,6 @@ export const navPages = {
   pokedex: {
     name: "Pokedex",
     href: () => `/pokedex/${randomId()}`,
+    icon: "/Pikachu.png",
   },
 };

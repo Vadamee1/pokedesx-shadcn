@@ -8,15 +8,15 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 export default function Navbar() {
   return (
     <div>
-      <div className="flex justify-between items-center px-32 pt-5">
-        <div className="flex space-x-2">
+      <div className="flex justify-between items-center px-10 md:px-32 pt-5">
+        <div className="flex space-x-2 items-center">
           <SheetNavbar />
-          <div className="hidden md:flex gap-1  ">
+          <Link href="/">
             <span className={`${titleFont.className} text-2xl`}>Pokemon</span>
-            <Link href="https://nextjs.org/" className="text-xs">
-              with Next.js
-            </Link>
-          </div>
+          </Link>
+          <Link href="https://nextjs.org/" className="text-xs mb-6">
+            with Next.js
+          </Link>
         </div>
         <div className="hidden lg:block">
           <RedirectLinks />
