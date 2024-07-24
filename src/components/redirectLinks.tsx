@@ -9,7 +9,7 @@ interface Props {
   isSheet?: boolean;
 }
 
-export default function RedirectLinks({ isSheet }: Props) {
+export function RedirectLinks({ isSheet }: Props) {
   const { pokedex } = navPages;
   const router = useRouter();
 
@@ -31,7 +31,7 @@ export default function RedirectLinks({ isSheet }: Props) {
           src={pokedex.icon}
           width={50}
           height={50}
-          className="text-white"
+          className="text-white h-auto w-auto"
         />
       )}
       <p className="hover:text-red-600">{pokedex.name}</p>

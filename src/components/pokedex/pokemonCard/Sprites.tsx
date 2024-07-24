@@ -31,6 +31,7 @@ export default function SpritesCarousel({ sprites, id }: Props) {
                 <div className="flex justify-center">
                   <Image
                     alt="Pokemon image"
+                    className="object-fill h-60 w-60"
                     src={sprite}
                     width={200}
                     height={200}
