@@ -14,7 +14,7 @@ import { BaseStat } from "@/types/pokemon/stats";
 const chartConfig = {
   desktop: {
     label: "Desktop",
-    color: "hsl(var(--chart-1))",
+    color: "hsl(var(--chart-5))",
   },
 } satisfies ChartConfig;
 

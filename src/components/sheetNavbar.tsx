@@ -9,8 +9,8 @@ import {
 } from "./ui/sheet";
 import { titleFont } from "@/config/fonts";
 import { Separator } from "./ui/separator";
-import RedirectLinks from "./redirectLinks";
 import { IoMenuSharp } from "react-icons/io5";
+import { RedirectLinks } from "./redirectLinks";
 
 export default function SheetNavbar() {
   return (

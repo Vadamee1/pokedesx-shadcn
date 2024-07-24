@@ -19,6 +19,7 @@ export default function IndividualCard({ id, name, offset }: Props) {
             <Image
               alt="Pokemon front image"
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}
+              priority
               height={100}
               width={100}
             />
