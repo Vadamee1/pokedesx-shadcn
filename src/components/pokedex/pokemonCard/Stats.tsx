@@ -20,7 +20,7 @@ export default function Stats({ baseStats }: Props) {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button variant="outline">{"stats".toUpperCase()}</Button>
+        <Button variant="default">{"stats".toUpperCase()}</Button>
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader className="flex flex-col justify-center items-center mt-3">
@@ -30,7 +30,7 @@ export default function Stats({ baseStats }: Props) {
         <StatsChart baseStats={baseStats} />
         <DrawerFooter>
           <DrawerClose asChild>
-            <Button variant="outline">Cancel</Button>
+            <Button variant="destructive">Close</Button>
           </DrawerClose>
         </DrawerFooter>
       </DrawerContent>

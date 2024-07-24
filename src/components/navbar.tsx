@@ -8,7 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 export default function Navbar() {
   return (
     <div>
-      <div className="flex justify-between items-center px-10 md:px-32 pt-5">
+      <div className="flex justify-between items-center px-5 md:px-32 pt-5">
         <div className="flex space-x-2 items-center">
           <SheetNavbar />
           <Link href="/">

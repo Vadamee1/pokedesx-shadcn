@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/pagination";
 import { PokemonResponse } from "@/types/pokemon";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 interface Props {
   data: PokemonResponse;
@@ -22,14 +23,18 @@ export default function PokemonPagination({ data, offset }: Props) {
       <PaginationContent className="space-x-4">
         {data.previous ? (
           <PaginationItem>
-            <Link href={`?offset=${newPreviousOffset}`}>Previous</Link>
+            <Link href={`?offset=${newPreviousOffset}`}>
+              <Button variant="ghost">Previous</Button>
+            </Link>
           </PaginationItem>
         ) : (
           ""
         )}
         {data.next ? (
           <PaginationItem>
-            <Link href={`?offset=${newNextOffset}`}>Next</Link>
+            <Link href={`?offset=${newNextOffset}`}>
+              <Button variant="ghost">Next</Button>
+            </Link>
           </PaginationItem>
         ) : (
           ""
