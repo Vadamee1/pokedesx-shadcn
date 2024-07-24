@@ -18,19 +18,23 @@ export default function RedirectLinks({ isSheet }: Props) {
   };
 
   const dinamicClasssName = `flex items-center gap-2 ${
-    isSheet ? "mt-5" : " left-1/2  -translate-x-1/2"
-  }  cursor-pointer text-2xl ${pokemonNames.className}`;
+    isSheet
+      ? `mt-5 ${pokemonNames.className} text-2xl`
+      : `left-1/2  -translate-x-1/2 text-xl`
+  }  cursor-pointer`;
 
   return (
     <div className={dinamicClasssName} onClick={handleLinkClick}>
-      <Image
-        alt="Pikachu icon"
-        src={pokedex.icon}
-        width={50}
-        height={50}
-        className="text-white"
-      />
-      {pokedex.name}
+      {isSheet && (
+        <Image
+          alt="Pikachu icon"
+          src={pokedex.icon}
+          width={50}
+          height={50}
+          className="text-white"
+        />
+      )}
+      <p className="hover:text-red-600">{pokedex.name}</p>
     </div>
   );
 }
