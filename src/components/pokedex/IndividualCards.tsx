@@ -13,12 +13,13 @@ export default function IndividualCard({ id, name, offset }: Props) {
   const newOffset = offset ? offset : 0;
   return (
     <Link href={`${id}?offset=${newOffset}`}>
-      <Card className="border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+      <Card className="border border-transparent px-5 py-4 transition-colors hover:border-red-300 hover:bg-red-100 hover:dark:border-red-700 hover:dark:bg-red-800/30">
         <CardContent>
           <div className="lg:flex">
             <Image
               alt="Pokemon front image"
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}
+              priority
               height={100}
               width={100}
             />

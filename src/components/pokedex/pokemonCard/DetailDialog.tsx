@@ -25,7 +25,7 @@ export default function DetailDialog({ moves }: Props) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className="w-full">
+        <Button variant="default" className="w-full">
           Moves
         </Button>
       </DialogTrigger>

@@ -1,14 +1,14 @@
 import { Separator } from "./ui/separator";
 import { titleFont } from "@/config/fonts";
 import Link from "next/link";
-import RedirectLinks from "./redirectLinks";
 import SheetNavbar from "./sheetNavbar";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import NavbarMenu from "./navigationMenu";
 
 export default function Navbar() {
   return (
     <div>
-      <div className="flex justify-between items-center px-10 md:px-32 pt-5">
+      <div className="flex justify-between items-center px-5 md:px-32 pt-5">
         <div className="flex space-x-2 items-center">
           <SheetNavbar />
           <Link href="/">
@@ -18,8 +18,8 @@ export default function Navbar() {
             with Next.js
           </Link>
         </div>
-        <div className="hidden lg:block">
-          <RedirectLinks />
+        <div className="hidden lg:block mb-9">
+          <NavbarMenu />
         </div>
         <Avatar>
           <AvatarImage
