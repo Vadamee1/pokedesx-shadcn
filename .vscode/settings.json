@@ -4,5 +4,11 @@
   "editor.formatOnSave": true,
   "editor.renderWhitespace": "all",
   "editor.tabSize": 2,
-  "cSpell.words": ["Pikachu", "Pokeball", "Pokemons"]
+  "cSpell.words": [
+    "Gigamax",
+    "Megaevolutions",
+    "Pikachu",
+    "Pokeball",
+    "Pokemons"
+  ]
 }

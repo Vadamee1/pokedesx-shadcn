@@ -1,7 +1,6 @@
 import {
   Alfa_Slab_One,
   Lilita_One,
-  Oswald,
   Permanent_Marker,
   Rowdies,
 } from "next/font/google";
