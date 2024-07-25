@@ -4,13 +4,23 @@ import { IoGameController, IoPeople } from "react-icons/io5";
 
 export default function Welcome() {
   return (
-    <div className="w-2/3">
-      <h1 className={`text-7xl ${subtitlesFont.className}`}>
+    <div className="md:w-2/3">
+      <h1
+        className={`text-4xl md:text-5xl lg:text-7xl ${subtitlesFont.className}`}
+      >
         Welcome, Pokemon trainer!
       </h1>
       <div className="flex gap-2 mt-10">
-        <Image alt="Podekex icon" src="/Pokedex.png" width={220} height={200} />
-        <div className={`grid ${pokemonNames.className} text-3xl gap-2`}>
+        <Image
+          alt="Podekex icon"
+          src="/Pokedex.png"
+          width={220}
+          height={200}
+          className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+        />
+        <div
+          className={`grid ${pokemonNames.className} md:text-2xl lg:text-3xl gap-2`}
+        >
           <p>
             This is a Pokedex with all the species existing so far, including
             regional forms, Megaevolutions and Gigamax forms.
@@ -21,7 +31,9 @@ export default function Welcome() {
           </p>
         </div>
       </div>
-      <div className={`grid ${pokemonNames.className} text-3xl gap-2 mt-32`}>
+      <div
+        className={`grid ${pokemonNames.className} text-3xl gap-2 mt-10 md:mt-32`}
+      >
         <p>Coming soon!</p>
         <div className="flex gap-2 items-center text-2xl">
           <IoPeople className="text-3xl" />
